@@ -29,7 +29,11 @@
   -->
 
     <div
+<<<<<<< HEAD
       class="flex items-stretch md:items-center justify-center min-h-full text-center md:px-2 lg:px-4"
+=======
+      class="flex py-24 items-stretch md:items-center justify-center min-h-full text-center md:px-2 lg:px-4"
+>>>>>>> 729a49ef6a3961de934206c243b882b4d05b6f9a
     >
       <!--
         Modal panel, show/hide based on modal state.
