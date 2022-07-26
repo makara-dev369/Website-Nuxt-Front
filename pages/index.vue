@@ -1,7 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <Tutorial/>
-=======
   <!-- <h1
     class="text-6xl font-bold text-center flex justify-center items-center h-screen"
   >
@@ -13,15 +10,10 @@
       <component :is="d.name" />
     </div>
   </div>
->>>>>>> 729a49ef6a3961de934206c243b882b4d05b6f9a
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
-  name: 'IndexPage'
-}
-=======
   name: "IndexPage",
   data() {
     const data = [
@@ -86,5 +78,4 @@ export default {
     }
   },
 };
->>>>>>> 729a49ef6a3961de934206c243b882b4d05b6f9a
 </script>
