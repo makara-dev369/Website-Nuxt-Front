@@ -25,20 +25,12 @@ export default {
   mounted() {
     // this.loopSection();
   },
-<<<<<<< HEAD
-
-=======
->>>>>>> 729a49ef6a3961de934206c243b882b4d05b6f9a
   methods: {},
 };
 </script>
 
-<<<<<<< HEAD
-<style></style>
-=======
 <style>
 html {
   scroll-behavior: smooth;
 }
 </style>
->>>>>>> 729a49ef6a3961de934206c243b882b4d05b6f9a
