@@ -64,26 +64,26 @@
                       </div>
                     </td>
                     <td
-                      class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      class="py-2 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
                       {{ data.email }}
                     </td>
                     <td
-                      class="py-4 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white"
+                      class="py-2 px-6 text-sm font-medium text-gray-500 whitespace-nowrap dark:text-white"
                     >
                       {{ data.firstname }}
                     </td>
                     <td
-                      class="py-4 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                      class="py-2 px-6 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white"
                     >
                       {{ data.lastname }}
                     </td>
                     <td
-                      class="py-4 px-6 text-sm font-medium text-right whitespace-nowrap"
+                      class="py-2 px-6 text-sm font-medium text-right whitespace-nowrap"
                     >
                       <a
                         href="#"
-                        class="text-blue-600 dark:text-blue-500 hover:underline"
+                        class="hover:underline text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-1 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                         >Edit</a
                       >
                     </td>

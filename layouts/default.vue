@@ -1,7 +1,10 @@
 <template>
   <div>
-    <Navbar />
+    <div class="mb-14">
+      <Navbar />
+    </div>
     <Nuxt />
+    <SectionFooter />
   </div>
 </template>
 <style>
