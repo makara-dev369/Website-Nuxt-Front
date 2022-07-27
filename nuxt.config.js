@@ -40,7 +40,7 @@ export default {
     },
   },
   axios: {
-    baseURL: "http://localhost:4000/api", // Used as fallback if no runtime config is provided
+    baseURL: `${process.env.API_APP}/api`, // Used as fallback if no runtime config is provided
   },
   auth: {},
   // router: {
