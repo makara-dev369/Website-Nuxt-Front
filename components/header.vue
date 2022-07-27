@@ -47,17 +47,10 @@
                 >Calendar</a
               >
 
-<<<<<<< HEAD
-              <a
-                href="#"
-                class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >Reports</a
-=======
               <NuxtLink
                 class="text-white hover:bg-purple-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium bg-purple-500"
                 to="/"
                 >Website</NuxtLink
->>>>>>> 729a49ef6a3961de934206c243b882b4d05b6f9a
               >
             </div>
           </div>
