@@ -7,7 +7,7 @@
         method="POST"
       >
         <div>
-          <h1 class="text-left font-bold text-2xl py-5">Edit Section</h1>
+          <h1 class="text-left font-bold text-2xl py-5">Add Section</h1>
           <div
             class="flex justify-between overflow-auto space-x-5 overflow-y-scroll h-96"
           >

@@ -151,6 +151,10 @@ export default {
     },
     clickCreate() {
       this.sectionComponet = "dialog-section";
+      const pageId = Number(this.$route.params.id);
+      this.objData = {
+        pageId: pageId,
+      };
       this.editDialog = true;
     },
 
