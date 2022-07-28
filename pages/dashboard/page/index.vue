@@ -157,7 +157,7 @@ export default {
       dataUser: [],
     };
   },
-  mounted() {
+  asyncData() {
     this.getData();
   },
   computed: { ...mapGetters(["getUser", "getLogin"]) },

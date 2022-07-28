@@ -125,7 +125,7 @@ export default {
         "Noted : Section name must to be the same name of component 👻🤖",
     };
   },
-  mounted() {
+  asyncData() {
     this.getDataSection();
   },
   methods: {
