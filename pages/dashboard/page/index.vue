@@ -164,11 +164,12 @@ export default {
           "Content-Type": "application/json",
         },
       };
-      await $axios.get(`/page/all`, auth).then((rep) => {
+      const dataUser =  await $axios.get(`/page/all`, auth).then((rep) => {
         if (rep.data) {
-          this.dataUser = rep.data;
+          return rep.data;
         }
       });
+      retrun {dataUser}
   },
   computed: { ...mapGetters(["getUser", "getLogin"]) },
 
