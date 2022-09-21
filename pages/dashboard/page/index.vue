@@ -157,8 +157,18 @@ export default {
       dataUser: [],
     };
   },
-  asyncData() {
-    this.getData();
+  async asyncData({$axios}) {
+    const auth = {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json",
+        },
+      };
+      await $axios.get(`/page/all`, auth).then((rep) => {
+        if (rep.data) {
+          this.dataUser = rep.data;
+        }
+      });
   },
   computed: { ...mapGetters(["getUser", "getLogin"]) },
 
