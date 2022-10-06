@@ -16,26 +16,26 @@ export default {
       pageData: [],
     };
   },
-  mounted() {
-    this.title = `/${this.$route.params.slug}`;
-    this.getPage();
-  },
-  methods: {
-    getPage() {
-      this.$axios.get(`/page/all`).then((rep) => {
-        if (rep.data) {
-          var data = rep.data;
-          // console.log(data);
-          for (var dt of data) {
-            if (this.title == dt.link) {
-              this.pageData = dt;
-            }
+
+  async asyncData({ $axios, route }) {
+    const link = route.path
+    const pageData = await $axios.get(`/page/all`).then((rep) => {
+      if (rep.data) {
+        var data = rep.data;
+        for (var dt of data) {
+          if (link == dt.link) {
+            return dt;
           }
         }
-      });
-    },
+      }
+    });
+    return { pageData }
+  },
+  methods: {
   },
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

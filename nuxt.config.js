@@ -45,7 +45,7 @@ export default {
     },
   },
   axios: {
-    baseURL: `${process.env.API_APP}/api`, // Used as fallback if no runtime config is provided
+    baseURL: `https://nest-api-dev.herokuapp.com/api`, // Used as fallback if no runtime config is provided
   },
   auth: {},
   // router: {

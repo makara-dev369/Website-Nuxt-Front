@@ -13,63 +13,40 @@
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <!-- Replace with your content -->
         <div class="px-4 py-6 sm:px-0">
-          <div
-            class="border-4 border-dashed border-gray-200 rounded-lg h-full py-10"
-          >
+          <div class="border-4 border-dashed border-gray-200 rounded-lg h-full py-10">
             <!-- component -->
-            <div
-              class="relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white w-full border-2 mb-6 rounded-xl mt-16"
-            >
+            <div class="relative max-w-md mx-auto md:max-w-2xl mt-6 min-w-0 break-words bg-white w-full border-2 mb-6 rounded-xl mt-16">
               <div class="px-6">
                 <div class="flex flex-wrap justify-center">
                   <div class="w-full flex justify-center">
                     <div class="relative mb-10">
-                      <img
-                        src="https://makara-dev.w3spaces.com/dh.png"
-                        class="align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 h-100 max-w-[150px]"
-                      />
+                      <img src="https://makara-dev.w3spaces.com/dh.png" class="align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 h-100 max-w-[150px]" />
                     </div>
                   </div>
                   <div class="w-full text-center mt-20">
                     <div class="flex justify-center lg:pt-4 pt-8 pb-0">
                       <div class="p-3 text-center">
-                        <span
-                          class="text-xl font-bold block uppercase tracking-wide text-slate-700"
-                          >3,360</span
-                        >
+                        <span class="text-xl font-bold block uppercase tracking-wide text-slate-700">3,360</span>
                         <span class="text-sm text-slate-400">Photos</span>
                       </div>
                       <div class="p-3 text-center">
-                        <span
-                          class="text-xl font-bold block uppercase tracking-wide text-slate-700"
-                          >2,454</span
-                        >
+                        <span class="text-xl font-bold block uppercase tracking-wide text-slate-700">2,454</span>
                         <span class="text-sm text-slate-400">Followers</span>
                       </div>
 
                       <div class="p-3 text-center">
-                        <span
-                          class="text-xl font-bold block uppercase tracking-wide text-slate-700"
-                          >564</span
-                        >
+                        <span class="text-xl font-bold block uppercase tracking-wide text-slate-700">564</span>
                         <span class="text-sm text-slate-400">Following</span>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="text-center mt-2">
-                  <h3
-                    class="text-2xl text-slate-700 font-bold leading-normal mb-1"
-                  >
+                  <h3 class="text-2xl text-slate-700 font-bold leading-normal mb-1">
                     Makara DevOP
                   </h3>
-                  <div
-                    class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase"
-                  >
-                    <i
-                      class="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"
-                    ></i
-                    >SiemReap, BMC
+                  <div class="text-xs mt-0 mb-2 text-slate-400 font-bold uppercase">
+                    <i class="fas fa-map-marker-alt mr-2 text-slate-400 opacity-75"></i>SiemReap, BMC
                   </div>
                 </div>
                 <div class="mt-6 py-6 border-t border-slate-200 text-center">
@@ -81,11 +58,7 @@
                         performs and records all of his own music, giving it a
                         warm.
                       </p>
-                      <a
-                        href="javascript:;"
-                        class="font-normal text-slate-700 hover:text-slate-400"
-                        >Follow Account</a
-                      >
+                      <a href="javascript:;" class="font-normal text-slate-700 hover:text-slate-400">Follow Account</a>
                     </div>
                   </div>
                 </div>
@@ -106,4 +79,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

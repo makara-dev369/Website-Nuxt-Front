@@ -1,7 +1,7 @@
 export default function (context) {
-  context.userAgent = process.server
-    ? context.req.headers["user-agent"]
-    : navigator.userAgent;
+  // context.userAgent = process.server
+  //   ? context.req.headers["user-agent"]
+  //   : navigator.userAgent;
 
   const { redirect } = context;
   if (process.client) {

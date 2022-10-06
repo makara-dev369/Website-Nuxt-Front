@@ -17,23 +17,20 @@ export default {
       pageData: [],
     };
   },
-  beforeMount() {
-    this.getPage();
-  },
-  methods: {
-    getPage() {
-      this.$axios.get(`/page/all`).then((rep) => {
-        if (rep.data) {
-          var data = rep.data;
-          for (var dt of data) {
-            if (this.title == dt.pageName) {
-              this.pageData = dt;
-              console.log(this.pageData);
-            }
+  async asyncData({ $axios }) {
+    const pageData = await $axios.get(`/page/all`).then((rep) => {
+      if (rep.data) {
+        var data = rep.data;
+        for (var dt of data) {
+          if (dt.pageName == 'Home') {
+            return dt;
           }
         }
-      });
-    },
+      }
+    });
+    return { pageData }
+  },
+  methods: {
   },
 };
 </script>
