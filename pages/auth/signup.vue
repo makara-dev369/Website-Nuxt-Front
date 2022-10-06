@@ -145,7 +145,7 @@ export default {
     submit() {
       const options = {
         headers: {
-          "Access-Control-Allow-Origin": "http://127.0.0.1:3000",
+          "Access-Control-Allow-Origin": "*",
           "Content-Type": "application/json",
           "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
