@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: "static",
-  ssr: false,
+  ssr: true,
   generate: {
     fallback: true,
   },
@@ -24,7 +24,7 @@ export default {
   css: ["@/assets/css/app.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  // plugins: ["~/plugins/vue-smooth-dnd.js"],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -45,7 +45,7 @@ export default {
     },
   },
   axios: {
-    baseURL: process.env.API_URL + "/api", // Used as fallback if no runtime config is provided
+    baseURL: `${process.env.API_APP}/api`, // Used as fallback if no runtime config is provided
   },
   auth: {},
   // router: {

@@ -6,7 +6,7 @@
       <div class="flex items-center justify-start w-1/4 h-full pr-4">
         <a href="#_" class="inline-block py-4 md:py-0">
           <span class="p-1 text-xl font-black leading-none text-gray-900"
-            >tails.</span
+            >FaceAzure.</span
           >
         </a>
       </div>
@@ -24,21 +24,13 @@
           <div
             class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center"
           >
-            <NuxtLink
-              class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-gray-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
-              to="/"
-              >Home</NuxtLink
-            >
-            <NuxtLink
-              class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-gray-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
-              to="/features"
-              >Features</NuxtLink
-            >
-            <NuxtLink
-              class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-gray-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
-              to="/contact"
-              >Contact</NuxtLink
-            >
+            <div v-for="data in menu" :key="data.id">
+              <NuxtLink
+                class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-gray-700 hover:text-indigo-600 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center"
+                :to="data.link"
+                >{{ data.pageName }}</NuxtLink
+              >
+            </div>
 
             <a
               href="#_"
@@ -112,7 +104,26 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      menu: [],
+    };
+  },
+  mounted() {
+    const auth = {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    };
+    this.$axios.get(`/page/all`, auth).then((rep) => {
+      if (rep.data) {
+        this.menu = rep.data;
+      }
+    });
+  },
+};
 </script>
 
 <style scoped>
