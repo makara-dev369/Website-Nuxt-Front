@@ -7,3 +7,11 @@
         @apply bg-gray-900 text-white
     }
 }
+@layer utilities{
+    .font-bayon{
+        font-family: 'Bayon', sans-serif;
+    }
+    .font-btb{
+        font-family: 'Battambang', cursive;
+    }
+}

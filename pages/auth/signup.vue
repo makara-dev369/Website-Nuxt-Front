@@ -1,134 +1,36 @@
 <template>
-  <div
-    class="h-screen flex items-center justify-center py-8 px-4 sm:px-6 lg:px-8"
-  >
-    <div
-      class="max-w-md w-full space-y-6 bg-gray-100 border-2 shadow-sm p-5 py-10"
-    >
-      <div>
-        <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Create your account
-        </h2>
-        <p
-          class="mt-2 text-center text-sm text-gray-600 font-medium text-indigo-600 hover:text-indigo-500"
-        >
-          library Management
-        </p>
+  <section class="w-full px-8 py-16 pt-[100px] bg-gray-100 xl:px-8">
+    <div class="max-w-5xl mx-auto ">
+      <div class="flex flex-col items-center md:flex-row space-y-2 space-x-5">
+        <div class="w-full mt-16 md:mt-0 md:w-2/5">
+          <div class="relative z-10 h-auto p-8 py-10 overflow-hidden bg-white border-b-2 border-gray-300 rounded-lg shadow px-7">
+            <h3 class="mb-6 text-2xl font-medium text-center font-btb font-bold">
+              បង្កើតគណនីថ្មី
+            </h3>
+            <input type="text" v-model="firstname" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none" placeholder="នាមខ្លួន" />
+            <input type="text" v-model="lastname" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none" placeholder="នាមត្រកូល" />
+            <input type="text" v-model="email" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none" placeholder="សារអេឡិចត្រូនិច" />
+            <input type="password" v-model="password" class="block w-full px-4 py-3 mb-4 border border-2 border-transparent border-gray-200 rounded-lg focus:ring focus:ring-blue-500 focus:outline-none" placeholder="ពាក្យសំងាត់**" />
+            <div class="block">
+              <button class="w-full px-3 py-4 font-medium text-white bg-gray-600 rounded-lg" @click="submit">
+                Create
+              </button>
+            </div>
+            <p class="w-full mt-4 text-sm text-center text-gray-500 font-btb">
+              មានគណនីហើយ?
+              <nuxt-link to="/auth/login" class="text-blue-500 underline">ចូលគណនី</nuxt-link>
+            </p>
+          </div>
+        </div>
+        <div class="w-full space-y-5 md:w-3/5 md:pr-16">
+          <h2 class="text-2xl font-extrabold leading-7 text-black sm:text-3xl md:text-5xl font-bayon " style="    line-height: 4.75rem;">
+            ការចូលរួមជាមួយក្រុម​អ្នកអភិវឌ្ឍ <span class="text-orange-600">ក្ដាមខ្យង</span> ។
+          </h2>
+        </div>
+
       </div>
-      <form class="mt-8 space-y-6" action="#" method="POST">
-        <input type="hidden" name="remember" value="true" />
-        <div class="rounded-md shadow-sm -space-y-px">
-          <div>
-            <label for="email-address" class="text-gray-600 mb-2 text-sm"
-              >First name</label
-            >
-            <input
-              name="firstname"
-              v-model="firstname"
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="First name"
-            />
-          </div>
-          <div>
-            <label for="email-address" class="text-gray-600 mb-2 text-sm"
-              >Last name</label
-            >
-            <input
-              name="lastname"
-              v-model="lastname"
-              type="text"
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Last name"
-            />
-          </div>
-          <!-- <div>
-            <label for="email-address" class="text-gray-600 mb-2 text-sm"
-              >Birth Date</label
-            >
-            <input
-              id="email-address"
-              name="email"
-              type="date"
-              autocomplete="email"
-              required
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Birth Date"
-            />
-          </div> -->
-          <div>
-            <label for="email-address" class="text-gray-600 mb-2 text-sm"
-              >Email address</label
-            >
-            <input
-              id="email-address"
-              name="email"
-              type="email"
-              v-model="email"
-              autocomplete="email"
-              required
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Email address"
-            />
-          </div>
-          <div>
-            <label for="email-address" class="text-gray-600 mb-2 text-sm"
-              >Password</label
-            >
-            <input
-              id="password"
-              name="password"
-              type="password"
-              v-model="password"
-              autocomplete="current-password"
-              required
-              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-              placeholder="Password"
-            />
-          </div>
-        </div>
-
-        <div class="flex items-center justify-between">
-          <div class="flex items-center">
-            <input
-              id="remember-me"
-              name="remember-me"
-              type="checkbox"
-              class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-            />
-            <label for="remember-me" class="ml-2 block text-sm text-gray-900">
-              Remember me
-            </label>
-          </div>
-        </div>
-
-        <div>
-          <button
-            type="button"
-            @click="submit"
-            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-              <!-- Heroicon name: solid/lock-closed -->
-              <svg
-                class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-            Create Account
-          </button>
-        </div>
-      </form>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -167,4 +69,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>
